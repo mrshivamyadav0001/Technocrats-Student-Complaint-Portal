@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="studentDashboard()">
+
+<header class="header">
+  <h1>Technocrats Institute of Technology</h1>
+  <p>Student Complaint Portal</p>
+</header>
+
+<section class="banner">
+  <img src="TIT-excellence.jpg">
+</section>
+
+<!-- INFO SCENE -->
+<section class="cards">
+  <div class="info-card" onclick="scrollToSection('transparent')">
+    <img src="TIT.jpeg">
+    <h3>Transparent System</h3>
+    <p>Track your complaint status online</p>
+  </div>
+
+  <div class="info-card" onclick="scrollToSection('quick')">
+    <img src="TIT3.jpeg">
+    <h3>Quick Resolution</h3>
+    <p>Faculty responds with solutions</p>
+  </div>
+
+  <div class="info-card" onclick="scrollToSection('friendly')">
+    <img src="images/campus3.jpg">
+    <h3>Student Friendly</h3>
+    <p>Easy & interactive dashboard</p>
+  </div>
+</section>
+
+<!-- COMPLAINT FORM -->
+<div class="container" id="transparent">
+<h3>Submit Complaint</h3>
+
+<textarea id="complaint" placeholder="Write your complaint"></textarea>
+<textarea id="suggestion" placeholder="Any suggestion for college?"></textarea>
+
+<label>Upload Complaint Image</label>
+<input type="file" id="complaintImg" accept="image/*">
+
+<button onclick="submitComplaint()">Submit Complaint</button>
+</div>
+
+<!-- STATUS -->
+<div class="container" id="quick">
+<h3>Your Complaint Status</h3>
+<div id="studentData"></div>
+</div>
+
+<a class="logout" href="login.html" onclick="logout()">Logout</a>
+
+<script src="script.js"></script>
+</body>
+</html>
